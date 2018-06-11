@@ -1,0 +1,21 @@
+  #include <iostream> 
+#include <string.h> 
+#include <stdlib.h> 
+using namespace std; 
+ 
+int main() 
+{ 
+char s[5]; 
+cin >> s; 
+if (strlen(s) != 5 || (int)s[0]<'A' || (int)s[0]>'H' || (int)s[3]<'A' || (int)s[3]>'H' || 
+int(s[1])>'8' || int(s[1])<'1' || int(s[4])>'8' || int(s[4])<'1' || int(s[2]) != '-') 
+{ 
+cout << "ERROR"; 
+return 0; 
+} 
+if ((abs((int)(s[0] - s[3])) == 1 && abs((int)(s[1] - s[4])) == 2) || 
+(abs((int)(s[0] - s[3])) == 2 && abs((int)(s[1] - s[4])) == 1)) 
+cout << "YES"; 
+else cout << "NO"; 
+return 0; 
+}
